@@ -1,0 +1,100 @@
+2021-09-03 12:49:30 : Trying to find the customer's surname by id:5
+2021-09-03 12:49:30 : Found data by id:5 about the customer : {"surnameAndInitials":"Yulyashev Sergio"}
+2021-09-03 12:49:30 : === encryption:ALCfyogP7kLDeGXEaMJQtk2vWY0tNeRsM8Nv10YUvkssU3KWxKCXnllmLkQlcvHF
+2021-09-03 12:49:30 : === decryption:{"surnameAndInitials":"Yulyashev Sergio"}
+2021-09-03 12:49:34 : Trying to find the customer's surname by id:2
+2021-09-03 12:49:34 : Found data by id:2 about the customer : {"surnameAndInitials":"Avdeeva Lika"}
+2021-09-03 12:49:34 : === encryption:5awJPh/slteK3kdenDX9x16wJjo3XRWfqrjCpnkwcZeJzWHAiA5+LANpdUOBFQym
+2021-09-03 12:49:34 : === decryption:{"surnameAndInitials":"Avdeeva Lika"}
+2021-09-03 12:49:37 : Trying to find the customer's surname by id:1
+2021-09-03 12:49:37 : Found data by id:1 about the customer : {"surnameAndInitials":"Bogun Ivan"}
+2021-09-03 12:49:37 : === encryption:ictOId0Wq1iabIRw4QcYpRwFCSDDww/9RCbHXQdV5/kqmycURDvIqPPz0ZEv8Kpn
+2021-09-03 12:49:37 : === decryption:{"surnameAndInitials":"Bogun Ivan"}
+2021-09-03 12:49:43 : Trying to find the customer's surname by id:
+2021-09-03 12:49:43 : No customer data with this index was found:
+2021-09-03 12:49:49 : Trying to find the customer's surname by id:4
+2021-09-03 12:49:49 : Found data by id:4 about the customer : {"surnameAndInitials":"Shukts Leo"}
+2021-09-03 12:49:49 : === encryption:sbFmvVPgsg7lJya7IxfJ6ECzwy8Gd1TOzPVu2ldY6/2ZL8JxGUHm71c2+1OyfxdK
+2021-09-03 12:49:49 : === decryption:{"surnameAndInitials":"Shukts Leo"}
+2021-09-03 12:49:54 : Trying to find the customer's surname by id:null
+2021-09-03 12:49:54 : No customer data with this index was found:null
+2021-09-03 12:51:28 : Trying to find the customer's surname by id:1
+2021-09-03 12:51:28 : Found data by id:1 about the customer : {"surnameAndInitials":"Bogun Ivan"}
+2021-09-03 12:51:28 : === encryption:JMcEppM2HnVNzVLJvUCpV0JW2iaXOCoATIKMmcYUniSEAu/7fuayWEQUDnwjke5x
+2021-09-03 12:51:28 : === decryption:{"surnameAndInitials":"Bogun Ivan"}
+2021-09-03 13:02:29 : Trying to find the customer's surname by id:2
+2021-09-03 13:02:29 : Found data by id:2 about the customer : {"surnameAndInitials":"Avdeeva Lika"}
+2021-09-03 13:02:29 : === encryption:WSpjIySl9p97FyQ/o/Zr24UMBfxCrXcC2SL7HSjyYXYezunVwB/MgKCRwOtBlwwP
+2021-09-03 13:02:29 : === decryption:{"surnameAndInitials":"Avdeeva Lika"}
+2021-09-03 13:09:09 : Trying to find the customer's surname by id:null
+2021-09-03 13:09:09 : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NumberFormatException: null] with root cause
+java.lang.NumberFormatException: null
+	at java.lang.Long.parseLong(Long.java:655) ~[?:?]
+	at java.lang.Long.valueOf(Long.java:1144) ~[?:?]
+	at com.example.springpostgregforclients.controller.CustomerController.getCustomer(CustomerController.java:72) ~[classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1064) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681) ~[tomcat-embed-core-9.0.52.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.9.jar:5.3.9]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.52.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.52.jar:9.0.52]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96) ~[spring-boot-actuator-2.5.4.jar:2.5.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.9.jar:5.3.9]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) [tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) [tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) [tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) [tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382) [tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) [tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1726) [tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) [tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-embed-core-9.0.52.jar:9.0.52]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.52.jar:9.0.52]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+2021-09-03 13:09:57 : Trying to find the customer's surname by id:null
+2021-09-03 13:09:57 : No customer data with this index was found:null
+2021-09-03 13:10:17 : Trying to find the customer's surname by id:4
+2021-09-03 13:10:17 : Found data by id:4 about the customer : {"surnameAndInitials":"Shukts Leo"}
+2021-09-03 13:10:17 : === encryption:9+innwCP0IP7nJAS4dxkB8vnI3CKDop77on2ji+dHEK79V9a8XJ7YlgWs8I2E8MT
+2021-09-03 13:10:17 : === decryption:{"surnameAndInitials":"Shukts Leo"}
+2021-09-03 13:10:25 : Trying to find the customer's surname by id:
+2021-09-03 13:10:25 : No customer data with this index was found:
+2021-09-03 13:10:35 : Trying to find the customer's surname by id:null
+2021-09-03 13:10:35 : No customer data with this index was found:null
+2021-09-03 13:11:05 : Trying to find the customer's surname by id:2.3
+2021-09-03 13:11:05 : No customer data with this index was found:2.3
