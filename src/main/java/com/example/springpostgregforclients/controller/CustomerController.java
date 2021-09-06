@@ -15,6 +15,7 @@ import org.apache.logging.log4j.Logger;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import javax.crypto.BadPaddingException;
@@ -36,7 +37,6 @@ import static com.example.springpostgregforclients.service.AESUtil.*;
 @RequestMapping("/api")
 public class CustomerController {
     private final CustomerRepository customerRepository;
-    ///private static final Logger log = (Logger) LoggerFactory.getLogger(CustomerController.class);
     final static Logger log = LogManager.getLogger(CustomerController.class);
 
     public CustomerController(CustomerRepository customerRepository) {
@@ -44,23 +44,25 @@ public class CustomerController {
     }
 
     @GetMapping("/customers")
+    @PreAuthorize("hasAnyRole('ADMIN','USER')")
     public ResponseEntity<List<Customer>> getAllCustomers() {
         log.debug("Getting customers...");
         try {
-            List<Customer> customers = new ArrayList<>();
-            customerRepository.findAll().forEach(customers::add);
-
+            List<Customer> customers = new ArrayList<>(customerRepository.findAll());
             if (customers.isEmpty()) {
                 log.debug("Customers dataset is empty.");
                 return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-            } else
+            } else {
+                log.debug("Customer data received.");
                 return new ResponseEntity<>(customers, HttpStatus.OK);
+            }
         } catch (Exception e) {
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
 
     @PostMapping(value = "/customers", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
+    @PreAuthorize("hasRole('ADMIN')")
     @ApiResponses(value = {
             @ApiResponse(code = 200, response = CustomerResponse.class,
                     message = "SingleResponseWrap with CustomerResponse in it")

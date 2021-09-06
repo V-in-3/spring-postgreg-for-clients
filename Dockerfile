@@ -10,7 +10,7 @@ WORKDIR /service
 
 COPY target/*.jar service.jar
 
-EXPOSE 8088
+EXPOSE 8080
 
 ENTRYPOINT exec java -server \
 -noverify \

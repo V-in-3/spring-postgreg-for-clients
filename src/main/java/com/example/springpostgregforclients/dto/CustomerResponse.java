@@ -42,13 +42,11 @@ public class CustomerResponse {
     {
         return "{\"surnameAndInitials\":\"" + surnameAndInitials + "\"}";
     }
-/*
-    public JSONObject getFio()
+/*  public JSONObject getFio()
     {
         JSONObject jo = new JSONObject();
         jo.put("fio", surnameAndInitials);
         return jo;
     }
-
  */
 }
