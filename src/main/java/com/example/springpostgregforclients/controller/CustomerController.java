@@ -47,6 +47,7 @@ public class CustomerController {
     @PreAuthorize("hasAnyRole('ADMIN','USER')")
     public ResponseEntity<List<Customer>> getAllCustomers() {
         log.debug("Getting customers...");
+
         try {
             List<Customer> customers = new ArrayList<>(customerRepository.findAll());
             if (customers.isEmpty()) {
@@ -82,9 +83,12 @@ public class CustomerController {
             String plainText = decrypt("AES/CBC/PKCS5Padding", cipherText, key, ivParameterSpec);
             log.debug("=== decryption:" + plainText);
             return new ResponseEntity<>(customerResponse, HttpStatus.OK);
-        } catch
-        (NoSuchAlgorithmException | InvalidAlgorithmParameterException | NoSuchPaddingException | IllegalBlockSizeException | BadPaddingException | InvalidKeyException
-                        e) {
+        } catch (NoSuchAlgorithmException |
+                InvalidAlgorithmParameterException |
+                NoSuchPaddingException |
+                IllegalBlockSizeException |
+                BadPaddingException |
+                InvalidKeyException e) {
             log.debug("An encryption problem has been detected.");
             throw new ServiceException("An encryption problem has been detected.", e);
         } catch (NumberFormatException e) {

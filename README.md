@@ -1,4 +1,4 @@
-# REST API (Middle Java Developer, Concord Bank)
+# REST API (Middle Java Developer, Some One Bank)
 
 ## Description
 

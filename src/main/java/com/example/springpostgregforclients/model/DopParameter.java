@@ -10,7 +10,7 @@ import javax.persistence.*;
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class DopParameter {
     @Id
-    @GeneratedValue(strategy= GenerationType.SEQUENCE)
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
     private long paramId;
 
     @Column(name = "client_id", insertable = false, updatable = false)
